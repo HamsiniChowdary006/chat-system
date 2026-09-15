@@ -1,0 +1,8 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./shared" },
+    { "path": "./api-service" },
+    { "path": "./chat-service" }
+  ]
+}

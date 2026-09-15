@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": true,
+    "target": "ES2022",
+    "skipLibCheck": true
+  },
+  "references": [{ "path": "../shared" }],
+  "include": ["src/**/*.ts"]
+}

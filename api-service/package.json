@@ -1,0 +1,26 @@
+{
+  "name": "api-service",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -b --pretty false",
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.16.3",
+    "redis": "^5.8.2"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^24.3.0",
+    "@types/pg": "^8.15.5",
+    "typescript": "^5.9.2",
+    "tsx": "^4.20.5"
+  }
+}

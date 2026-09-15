@@ -1,0 +1,22 @@
+{
+  "name": "chat-service",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -b --pretty false",
+    "dev": "tsx watch src/index.ts"
+  },
+  "dependencies": {
+    "pg": "^8.16.3",
+    "redis": "^5.8.2",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@types/ws": "^8.18.1",
+    "typescript": "^5.9.2",
+    "tsx": "^4.20.5"
+  }
+}

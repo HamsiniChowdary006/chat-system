@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Distributed Chat Test Client</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Phase 8 / protocol console</p>
+        <h1>Distributed Chat</h1>
+      </div>
+      <div class="connection-state"><span id="connection-dot" class="dot"></span><span id="connection-label">Disconnected</span></div>
+    </header>
+
+    <section class="setup panel">
+      <div class="panel-heading"><h2>Session</h2><span id="user-label" class="muted">No account</span></div>
+      <div class="form-grid">
+        <label>API URL<input id="api-url" value="http://localhost:3000"></label>
+        <label>Email<input id="email" type="email" placeholder="you@example.com"></label>
+        <label>Password<input id="password" type="password" placeholder="At least 8 characters"></label>
+        <label>Display name<input id="display-name" placeholder="Only needed for signup"></label>
+      </div>
+      <div class="actions"><button id="signup" class="secondary">Sign up</button><button id="login">Log in</button><button id="connect" class="secondary" disabled>Connect socket</button><button id="disconnect" class="ghost" disabled>Disconnect</button></div>
+    </section>
+
+    <div class="workspace">
+      <section class="panel conversation-panel">
+        <div class="panel-heading"><h2>Message flow</h2><span id="sync-label" class="muted">Waiting for login</span></div>
+        <div id="messages" class="messages" aria-live="polite"><p class="empty">Authenticate, connect, and send a message to inspect the protocol.</p></div>
+        <form id="message-form" class="message-form">
+          <select id="message-kind" aria-label="Message type"><option value="direct">Direct</option><option value="group">Group</option></select>
+          <input id="target-id" required placeholder="Recipient user ID">
+          <input id="message-body" required maxlength="100000" placeholder="Write a text message">
+          <button type="submit" id="send" disabled>Send</button>
+        </form>
+      </section>
+
+      <aside class="side-column">
+        <section class="panel"><div class="panel-heading"><h2>Presence</h2><span class="muted">30s lease</span></div><div id="presence-list" class="presence-list"><p class="empty">Presence events will appear here.</p></div></section>
+        <section class="panel"><div class="panel-heading"><h2>Device</h2><span class="muted">Phase 7 cursor</span></div><p id="device-id" class="mono"></p><p class="hint">Keep this ID to simulate reconnecting the same device. Use another ID in a second tab for multi-device replay.</p></section>
+        <section class="panel log-panel"><div class="panel-heading"><h2>Event log</h2><button id="clear-log" class="ghost">Clear</button></div><pre id="event-log"></pre></section>
+      </aside>
+    </div>
+  </main>
+  <script type="module" src="./client.js"></script>
+</body>
+</html>

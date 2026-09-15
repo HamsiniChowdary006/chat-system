@@ -1,0 +1,25 @@
+{
+  "name": "chat-system-frontend",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host localhost",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc -b --pretty false"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "tailwindcss": "^4.1.13",
+    "@tailwindcss/vite": "^4.1.13",
+    "vite": "^7.1.5",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9"
+  }
+}
